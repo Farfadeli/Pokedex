@@ -5,7 +5,7 @@ function  PokemonCard({props}) {
     return(
         <div className="card">
             <h1>{props.name}</h1> 
-            <img className="pokedex-cover" src={props.cover} alt={`${name} cover`} />
+            <img className="pokedex-cover" src={props.cover} alt={`cover`} />
             {props.type}
             {props.id}
             {props.generation}

@@ -45,5 +45,11 @@ html .search-component input, body .search-component input {
   border-bottom: 2px solid rgb(212, 212, 222);
   outline: none;
 }
+html .pokeList, body .pokeList {
+  height: 93.5vh;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  column-gap: 1%;
+}
 
 /*# sourceMappingURL=style.css.map */

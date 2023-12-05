@@ -48,4 +48,10 @@ html,body{
         }
         
     }
+    .pokeList{
+        height: calc(100vh - 6.5vh);
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        column-gap: 1%;
+    }
 }
