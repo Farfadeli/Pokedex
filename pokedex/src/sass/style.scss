@@ -1,0 +1,51 @@
+$brown : #963004;
+
+*{
+    margin: 0;
+}
+
+html,body{
+    background-color: $brown;
+    width: 100%;
+    height: 100%;
+
+    .display{
+        width: 100%;
+        height: 100%;
+        padding-top: 1.5vh;
+    }
+    .search-component{
+        width: 100%;
+        height: 5vh;
+        gap: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .select-list{
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            gap: 20%;
+        }
+        select{
+            padding: .75rem;
+            background: transparent;
+            border: none;
+            border-top: 1px solid rgb(212, 212, 222);
+            border-bottom: 1px solid rgb(212, 212, 222);
+            color: white;
+        }
+        input{
+            width: 75%;
+            padding-bottom: 15px;
+            border: none;
+            color: white;
+            background: transparent;
+            border-bottom: 2px solid rgb(212, 212, 222);
+            outline: none;
+        }
+        
+    }
+}
