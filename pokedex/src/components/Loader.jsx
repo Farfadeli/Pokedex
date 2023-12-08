@@ -21,7 +21,7 @@ const Loader = () => {
         {/* Utilisez la balise <img> pour afficher votre fichier SVG */}
         <img className="pokeball" src={PokeballSvg} alt="Pokeball" />
       </div>
-      {loadingText}
+      <div className="loading-text">{loadingText}</div>
     </div>
   );
 };

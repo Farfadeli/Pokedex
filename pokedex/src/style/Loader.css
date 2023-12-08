@@ -7,12 +7,13 @@
     justify-content: center;
     height: 100vh;
     font-size: 1.5rem;
+    color: white; /* Style le texte en blanc */
   }
   
   .pokeball-container {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
   
   .pokeball {
@@ -21,12 +22,17 @@
     animation: rotatePokeball 2s linear infinite;
   }
   
+  .loading-text {
+    margin-top: 10px; /* Ajoute un espace entre la pokeball et le texte */
+  }
+  
+  
   @keyframes rotatePokeball {
-    0%, 100% {
+    0% {
       transform: rotate(0deg);
     }
-    50% {
-      transform: rotate(180deg);
+    100% {
+      transform: rotate(360deg);
     }
   }
   
