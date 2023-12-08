@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import '../style/style.css'
 import PokemonCard from './PokemonCard'
+import Type from "./Type";
+import Loader from "./Loader";
+import logo from '../assets/logo.svg'
 
 
 
@@ -47,13 +50,6 @@ const Display = () => {
         // Gérer les erreurs ici si nécessaire
         setIsLoading(false); // Assurez-vous de désactiver le Loader en cas d'erreur
       }
-
-        let res_type = []
-        type_data["data"].map((elem) => {
-            res_type.push([elem["image"], elem["name"]["fr"]])
-        })
-        setPokeTypes(res_type)
-        setPokeList(res)
     }
 
     function defPokeType(ids){
