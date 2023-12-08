@@ -16,12 +16,13 @@ const Display  = (props) =>{
         const pokemons = await poke_data.json()
 
         let res = []
-        setPokeList(pokemons["data"][0]["name"]["fr"])
-        for(let e = 0; e != pokemons["data"].length; e++){
-            res.push({ {"name" : pokemons["data"][0]["name"]["fr"], "image" : pokemons["data"][0]["image"], "id" : pokemons["data"][0]["id"], "type": pokemons["data"][0]["types"], "generation": pokemons["data"][0]["generation"]}})
-        }
-        setCardpoke(res)
-        
+        // Boucle sur toute les données récupérer
+        pokemons["data"].map((elem) => {
+            res.push(elem["image"])
+        })
+        setPokeList(res)
+
+        console.log(pokeList)
     }
 
     useEffect(() => {
