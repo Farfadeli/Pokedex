@@ -2,26 +2,52 @@ import React, { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import '../style/style.css'
 import PokemonCard from './PokemonCard'
-import Type from "./Type";
 
 
 
-const Display  = () =>{
+const Display = () => {
+    const [pokeList, setPokeList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+      const [pokeTypes, setPokeTypes] = useState([])
 
-    const [pokeList,setPokeList] = useState([])
-    const [pokeTypes, setPokeTypes] = useState([])
-
-    async function fetchApi(url_pokemon, url_types){
+    async function fetchApi(url_pokemon, url_types) {
+      try {
+        // Démarre le chargement, affiche le Loader
+        setIsLoading(true);
+  
         // Récupération des données (promesse)
-        let poke_data = await fetch(url_pokemon)
-        const pokemons = await poke_data.json()
+        let poke_data = await fetch(url_pokemon);
+        const pokemons = await poke_data.json();
         let poke_type_data = await fetch(url_types)
-        const type_data = await poke_type_data.json()
-        let res = []
-        // Boucle sur toute les données récupérer
+        const type_data = await poke_type_data.json()  
+        let res = [];
+        // Boucle sur toute les données récupérées
         pokemons["data"].map((elem) => {
-            res.push({"id" : elem["id"] , "cover" :elem["image"], "name": elem["name"]["fr"], "generation": elem["generation"], "type": [elem["types"]]})
+          res.push({
+            "id": elem["id"],
+            "cover": elem["image"],
+            "name": elem["name"]["fr"],
+            "generation": elem["generation"],
+            "type": [elem["types"]],
+          });
+        });
+        let res_type = []
+        type_data["data"].map((elem) => {
+            res_type.push([elem["image"], elem["name"]["fr"]])
         })
+        setPokeTypes(res_type)
+  
+        // Met fin au chargement, masque le Loader
+
+        setIsLoading(false);
+        setPokeTypes(res_type)
+        setPokeList(res);
+      } catch (error) {
+        console.error('Une erreur s\'est produite lors du chargement des données :', error);
+        // Gérer les erreurs ici si nécessaire
+        setIsLoading(false); // Assurez-vous de désactiver le Loader en cas d'erreur
+      }
+
         let res_type = []
         type_data["data"].map((elem) => {
             res_type.push([elem["image"], elem["name"]["fr"]])
@@ -49,14 +75,21 @@ const Display  = () =>{
     }
 
     useEffect(() => {
-        const url_pokemon = "https://pokedex-api.3rgo.tech/api/pokemon"
-        const url_type = "https://pokedex-api.3rgo.tech/api/types"
-        fetchApi(url_pokemon, url_type)
-    }, [])
-
-    return(
-        <div className="display">
-            <SearchBar/>
+      const url_pokemon = "https://pokedex-api.3rgo.tech/api/pokemon";
+      const url_type = "https://pokedex-api.3rgo.tech/api/types";
+      fetchApi(url_pokemon, url_type);
+    }, []);
+  
+    return (
+      <div className="display">
+        {isLoading ? (
+          // Affichez le Loader tant que les données sont en cours de chargement
+          <Loader />
+        ) : (
+          // Affichez le contenu une fois que les données sont chargées
+          <div>
+            <img src={logo} alt='logo' />
+            <SearchBar />
             <div className="pokeList">
                 {
                 pokeList.map((elem) => {
@@ -69,4 +102,9 @@ const Display  = () =>{
     )
 }
 
+            
+      </div>
+    );
+  };
+  
 export default Display;
