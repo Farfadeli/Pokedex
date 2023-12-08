@@ -3,18 +3,21 @@
 }
 
 html, body {
-  background-color: #000222;
+  background-color: #963004;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 html .display, body .display {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   padding-top: 1.5vh;
 }
 html .search-component, body .search-component {
   width: 100%;
-  height: 5vh;
+  height: 15vh;
   gap: 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -46,10 +49,17 @@ html .search-component input, body .search-component input {
   outline: none;
 }
 html .pokeList, body .pokeList {
-  height: 93.5vh;
+  height: 90vh;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-template-columns: 32% 32% 32%;
+  grid-template-columns: 33% 33% 33%;
   column-gap: 1%;
+  row-gap: 2rem;
+}
+html .pokelist .card, body .pokelist .card {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
