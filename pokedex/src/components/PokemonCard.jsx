@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import '../style/PokemonCard.css'
+import Type from './Type';
 
 function  PokemonCard({name, cover, type, id, generation}) {
     const [isModalVisible, setModalVisibility] = useState(false)
@@ -13,6 +14,7 @@ function  PokemonCard({name, cover, type, id, generation}) {
         setModalVisibility(false)
     }
 
+
     return(
         <div>
             <div className="card" onClick={handleCardClick}>
@@ -21,9 +23,7 @@ function  PokemonCard({name, cover, type, id, generation}) {
                 <div className='card-details'>
                     <h2>{name}</h2>
                 </div>
-                <div className='card-details'>
-                    <h3>{type}</h3>
-                </div>
+                {type}
                 <div className='card-details'>
                     <h3>Génération : {generation}</h3>
                 </div>
@@ -38,7 +38,7 @@ function  PokemonCard({name, cover, type, id, generation}) {
                             <h2>{name}</h2>
                         </div>
                         <div className='card-details'>
-                            <h3>{type}</h3>
+                            {type}
                         </div>
                         <div className='card-details'>
                             <h3>Génération : {generation}</h3>

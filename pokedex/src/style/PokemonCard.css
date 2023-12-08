@@ -1,21 +1,22 @@
-<<<<<<< HEAD
 .card{
     width: 100%;
     height: auto;
     background-color: white;
     border-radius: 16px;
-=======
-
-.card-details {
-    margin-top: 10px;
-}
-
->>>>>>> 746676d07db1c6b21a1884084927d92d36af5175
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    padding: 5px;
 }
+.card img{
+    width: 275px;
+    height: 300px;
+}
+.card-details {
+    margin-top: 10px;
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -37,3 +38,10 @@
     overflow: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de la modal */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour la modal */
   }
+.type{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
