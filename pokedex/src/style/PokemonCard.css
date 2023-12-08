@@ -1,20 +1,16 @@
-<<<<<<< HEAD
+
 .card{
     width: 100%;
     height: auto;
-    background-color: white;
+    background-color: #fff;
     border-radius: 16px;
-=======
-
-.card-details {
-    margin-top: 10px;
-}
-
->>>>>>> 746676d07db1c6b21a1884084927d92d36af5175
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+}
+.card-details {
+    margin-top: 10px;
 }
 .modal-overlay {
     position: fixed;
@@ -37,3 +33,8 @@
     overflow: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de la modal */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour la modal */
   }
+
+  .card img{
+    width: 275px;
+    height: 300px;
+}

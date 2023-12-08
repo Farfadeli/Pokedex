@@ -1,0 +1,32 @@
+/* Loader.css */
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 1.5rem;
+  }
+  
+  .pokeball-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .pokeball {
+    width: 100%;
+    height: 100%;
+    animation: rotatePokeball 2s linear infinite;
+  }
+  
+  @keyframes rotatePokeball {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+  }
+  
