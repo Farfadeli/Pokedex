@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .type_component {
   width: 33%;
   height: 30px;
@@ -13,6 +14,81 @@
   width: 25px;
   height: 25px;
   border-radius: 100rem;
+}
+
+.Plante {
+  background-color: rgb(66, 219, 66);
+}
+
+.Poison {
+  background-color: rgb(135, 54, 135);
+}
+
+.Feu, .Fire {
+  background-color: rgb(227, 168, 59);
+}
+
+.Vol {
+  background-color: rgb(170, 170, 212);
+}
+
+.Eau {
+  background-color: rgb(72, 72, 221);
+}
+
+.Insecte {
+  background-color: rgb(65, 130, 65);
+}
+
+.Normal {
+  background-color: gray;
+}
+
+.Sol {
+  background-color: rgb(126, 70, 3);
+  color: white;
+}
+
+.Électrik {
+  background-color: rgb(245, 245, 28);
+}
+
+.Fée {
+  background-color: pink;
+}
+
+.Combat {
+  background-color: rgb(235, 197, 127);
+}
+
+.Psy {
+  background-color: rgb(224, 95, 117);
+}
+
+.Roche {
+  background-color: rgb(70, 70, 70);
+  color: white;
+}
+
+.Acier {
+  background-color: steelblue;
+}
+
+.Glace {
+  background-color: rgb(209, 209, 244);
+}
+
+.Spectre {
+  background-color: rgb(166, 115, 166);
+}
+
+.Dragon {
+  background-color: blueviolet;
+}
+
+.Ténèbres {
+  background-color: rgb(47, 47, 47);
+  color: white;
 }
 
 /*# sourceMappingURL=type.css.map */

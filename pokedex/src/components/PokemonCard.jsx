@@ -9,7 +9,6 @@ function PokemonCard({ name, cover, type, id, generation }) {
 
     const handleCardClick = () => {
         setModalVisibility(true);
-
     }
 
     const closeModal = () => {
