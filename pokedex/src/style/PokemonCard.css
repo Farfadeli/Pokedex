@@ -1,13 +1,39 @@
+<<<<<<< HEAD
 .card{
     width: 100%;
     height: auto;
     background-color: white;
     border-radius: 16px;
+=======
+
+.card-details {
+    margin-top: 10px;
+}
+
+>>>>>>> 746676d07db1c6b21a1884084927d92d36af5175
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
 }
-.card img{
-    width: 200px;
-}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour l'overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff; /* Fond de la modal */
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%; /* Ajustez la largeur de la modal selon vos besoins */
+    max-height: 80%; /* Ajustez la hauteur de la modal selon vos besoins */
+    overflow: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de la modal */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour la modal */
+  }
