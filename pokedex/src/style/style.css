@@ -54,8 +54,8 @@ html .pokeList, body .pokeList {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  column-gap: 1%;
+  grid-template-columns: 32% 32% 32%;
+  column-gap: 1.5%;
   row-gap: 2rem;
 }
 html .pokelist .card, body .pokelist .card {
