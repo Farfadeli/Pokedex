@@ -52,6 +52,7 @@ html,body{
         height: calc(100vh - 6.5vh);
         display: grid;
         grid-template-columns: 32% 32% 32%;
+        grid-template-rows: 33% 33% 33%;
         column-gap: 1%;
     }
 }
