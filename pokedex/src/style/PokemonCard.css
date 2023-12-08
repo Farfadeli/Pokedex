@@ -9,6 +9,9 @@
     cursor: pointer;
     padding: 5px;
 }
+.card h1{
+    margin-right: auto;
+}
 .card img{
     width: 275px;
     height: 300px;
@@ -38,6 +41,14 @@
     overflow: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de la modal */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour la modal */
   }
+  .modal-content svg{
+    margin-left: 100%;
+    transform: translate(-100%);
+    cursor: pointer;
+    }
+    .modal-content img{
+        cursor: pointer;
+    }
 
   .card img{
     width: 275px;

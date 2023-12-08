@@ -11,7 +11,7 @@ import logo from '../assets/logo.svg'
 const Display = () => {
     const [pokeList, setPokeList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-      const [pokeTypes, setPokeTypes] = useState([])
+    const [pokeTypes, setPokeTypes] = useState([])
 
     async function fetchApi(url_pokemon, url_types) {
       try {
@@ -28,10 +28,11 @@ const Display = () => {
         pokemons["data"].map((elem) => {
           res.push({
             "id": elem["id"],
-            "cover": elem["image"],
+            "cover": [elem["image"], elem["image_shiny"]],
             "name": elem["name"]["fr"],
             "generation": elem["generation"],
             "type": [elem["types"]],
+            "Evolution":{"EvoledFrom" : {}}
           });
         });
         let res_type = []
