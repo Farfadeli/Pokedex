@@ -19,7 +19,7 @@ const Display  = (props) =>{
         let res = []
         setPokeList(pokemons["data"][0]["name"]["fr"])
         for(let e = 0; e != pokemons["data"].length; e++){
-            res.push({"name" : pokemons["data"][0]["name"]["fr"], "image" : pokemons["data"][0]["image"], "id" : pokemons["data"][0]["id"], "type": pokemons["data"][0]["types"], "generation": pokemons["data"][0]["generation"]})
+            res.push({ {"name" : pokemons["data"][0]["name"]["fr"], "image" : pokemons["data"][0]["image"], "id" : pokemons["data"][0]["id"], "type": pokemons["data"][0]["types"], "generation": pokemons["data"][0]["generation"]}})
         }
         setCardpoke(res)
         
@@ -35,7 +35,7 @@ const Display  = (props) =>{
         <div className="display">
             <SearchBar/>
             <div className="pokeList">
-                {cardPoke}
+                {cardPoke.map()}
             </div>
         </div>
     )
