@@ -84,7 +84,9 @@ const Display = () => {
         ) : (
           // Affichez le contenu une fois que les données sont chargées
           <div>
-            <img src={logo} alt='logo' />
+            <div className="container_img">
+                <img src={logo} className="logo" alt='logo' />
+            </div>
             <SearchBar />
             <div className="pokeList">
                 {
