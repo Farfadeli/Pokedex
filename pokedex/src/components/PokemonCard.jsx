@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../style/PokemonCard.css'
 import Type from './Type';
 
-function PokemonCard({ name, cover, type, id, generation }) {
+function PokemonCard({ name, cover, type, id, generation, height, weight}) {
     const [isModalVisible, setModalVisibility] = useState(false)
     const [coverState, setCoverState] = useState("")
     const [coverIsShiny, setCoverIsShiny] = useState(false)
@@ -48,11 +48,12 @@ function PokemonCard({ name, cover, type, id, generation }) {
             {isModalVisible && (
                 <div className='modal-overlay'>
                     <div className='modal-content'>
-
-                        <svg onClick={closeModal} width="25" height="25">
-                            <line x1="0" y1="0" x2="25" y2="25" stroke="black" fill='black' />
-                            <line x1="0" y1="25" x2="25" y2="0" stroke="black" fill='black' />
-                        </svg>
+                        <div className='close-x'>
+                            <svg  onClick={closeModal} width="25" height="25">
+                                <line x1="0" y1="0" x2="25" y2="25" stroke="black" fill='black' />
+                                <line x1="0" y1="25" x2="25" y2="0" stroke="black" fill='black' />
+                            </svg>
+                        </div>
                         <h1>#{id}</h1>
                         <img onClick={changeCoverToShiny} className="pokedex-cover" src={coverState} alt={`cover`} />
                         <div className='card-details'>
@@ -65,7 +66,10 @@ function PokemonCard({ name, cover, type, id, generation }) {
                             <h3>Génération : {generation}</h3>
                         </div>
                         <div className='card-details'>
-                            <h3>azertyuiop</h3>
+                            <h3>Taille : {height}</h3>
+                        </div>
+                        <div className='card-details'>
+                            <h3>Poids : {weight}</h3>
                         </div>
                     </div>
                 </div>

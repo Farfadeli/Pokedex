@@ -32,7 +32,9 @@ const Display = () => {
             "name": elem["name"]["fr"],
             "generation": elem["generation"],
             "type": [elem["types"]],
-            "Evolution":{"EvoledFrom" : {}}
+            "Evolution":{"EvoledFrom" : {}},
+            "Taille" : elem["height"],
+            "poids" : elem["weight"]
           });
         });
         let res_type = []
@@ -54,7 +56,7 @@ const Display = () => {
     }
 
     function defPokeType(ids){
-        if(ids[0].length == 2){
+        if(ids[0].length === 2){
             return(
                 <div className="card-details type">
                     <Type image={pokeTypes[ids[0][0]-1][0]} name={pokeTypes[ids[0][0]-1][1]}/>
@@ -92,7 +94,7 @@ const Display = () => {
             <div className="pokeList">
                 {
                 pokeList.map((elem) => {
-                    return <PokemonCard key={elem["id"]} name={elem["name"]} cover={elem["cover"]} id={elem["id"]} generation={elem["generation"]} type={defPokeType(elem["type"])}/>
+                    return <PokemonCard key={elem["id"]} name={elem["name"]} cover={elem["cover"]} id={elem["id"]} generation={elem["generation"]} type={defPokeType(elem["type"])} height={elem["Taille"]} weight={elem["poids"]}/>
                 })
                 
                 }
