@@ -34,7 +34,7 @@ const Display = () => {
             "name_en": elem["name"]["en"],
             "generation": elem["generation"],
             "type": [elem["types"]],
-            "Evolution":{"EvoledFrom" : {}},
+            "EvolvFrom":{"EvoledFrom" : {}},
             "Taille" : elem["height"],
             "poids" : elem["weight"],
             "hp" : elem["stats"]["hp"],
@@ -43,6 +43,7 @@ const Display = () => {
             "vit" : elem["stats"]["vit"],
             "spe_atk": elem["stats"]["spe_atk"],
             "spe_def" : elem["stats"]["spe_def"],
+            "EvolvTo" : {"EvolvesTo": {}}
           });
         });
         let res_type = []

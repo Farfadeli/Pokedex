@@ -3,7 +3,7 @@ import '../style/PokemonCard.css'
 import Type from './Type';
 import RadarChart from './RadarChart';
 
-function PokemonCard({ name_type, name, cover, type, id, generation, height, weight, def, atk, vit, hp, spe_atk, spe_def}) {
+function PokemonCard({ name_type, name, cover, type, id, generation, height, weight, def, atk, vit, hp, spe_atk, spe_def, evovleFrom, evovleTo}) {
     const [isModalVisible, setModalVisibility] = useState(false)
     const [coverState, setCoverState] = useState("")
     const [coverIsShiny, setCoverIsShiny] = useState(false)
@@ -74,7 +74,6 @@ function PokemonCard({ name_type, name, cover, type, id, generation, height, wei
                         </div>
                         <div className='card-details'>
                             <RadarChart atk={atk} def={def} vit={vit} hp={hp} spe_atk={spe_atk} spe_def={spe_def}/>
-
                         </div>
                     </div>
                 </div>
