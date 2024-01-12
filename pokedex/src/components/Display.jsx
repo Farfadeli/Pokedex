@@ -34,7 +34,13 @@ const Display = () => {
             "type": [elem["types"]],
             "Evolution":{"EvoledFrom" : {}},
             "Taille" : elem["height"],
-            "poids" : elem["weight"]
+            "poids" : elem["weight"],
+            "hp" : elem["stats"]["hp"],
+            "atk": elem["stats"]["atk"],
+            "def" : elem["stats"]["def"],
+            "vit" : elem["stats"]["vit"],
+            "spe_atk": elem["stats"]["spe_atk"],
+            "spe_def" : elem["stats"]["spe_def"],
           });
         });
         let res_type = []
@@ -78,7 +84,7 @@ const Display = () => {
       const url_type = "https://pokedex-api.3rgo.tech/api/types";
       fetchApi(url_pokemon, url_type);
     }, []);
-  
+
     return (
       <div className="display">
         {isLoading ? (
@@ -90,11 +96,21 @@ const Display = () => {
             <div className="container_img">
                 <img src={logo} className="logo" alt='logo' />
             </div>
-            <SearchBar />
+            <SearchBar/>
             <div className="pokeList">
                 {
                 pokeList.map((elem) => {
-                    return <PokemonCard key={elem["id"]} name={elem["name"]} cover={elem["cover"]} id={elem["id"]} generation={elem["generation"]} type={defPokeType(elem["type"])} height={elem["Taille"]} weight={elem["poids"]}/>
+                    return <PokemonCard key={elem["id"]} 
+                    name_type={pokeTypes[elem["type"][0][0]-1][1]}
+                    name={elem["name"]} 
+                    cover={elem["cover"]} 
+                    id={elem["id"]} 
+                    generation={elem["generation"]} 
+                    type={defPokeType(elem["type"])} 
+                    height={elem["Taille"]} 
+                    weight={elem["poids"]}
+
+                    />
                 })
                 
                 }

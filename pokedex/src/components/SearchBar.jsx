@@ -1,10 +1,9 @@
 import React from "react";
-import Display from "./Display";
 
-const SearchBar = () => {
+const SearchBar = ({onSearch}) => {
     return (
         <div className="search-component">
-            <input type="search"  className="searchbar" placeholder="Rechercher un pokémon..." />
+            <input type="search"  className="searchbar" placeholder="Rechercher un pokémon..." onChange={(e)=> onSearch(e.target.value)} />
             <div className="select-list">
                 <select name="" id="">
                     <option value="">Trier par</option>
