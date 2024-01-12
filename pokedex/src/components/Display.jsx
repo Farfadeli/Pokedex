@@ -94,7 +94,7 @@ const Display = () => {
             <div className="pokeList">
                 {
                 pokeList.map((elem) => {
-                    return <PokemonCard key={elem["id"]} name={elem["name"]} cover={elem["cover"]} id={elem["id"]} generation={elem["generation"]} type={defPokeType(elem["type"])} height={elem["Taille"]} weight={elem["poids"]}/>
+                    return <PokemonCard key={elem["id"]} name_type={pokeTypes[elem["type"][0][0]-1][1]} name={elem["name"]} cover={elem["cover"]} id={elem["id"]} generation={elem["generation"]} type={defPokeType(elem["type"])} height={elem["Taille"]} weight={elem["poids"]}/>
                 })
                 
                 }

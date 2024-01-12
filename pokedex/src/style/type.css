@@ -8,6 +8,7 @@
   align-items: center;
   padding: 2.5px;
   gap: 5px;
+  background-color: white;
 }
 
 .type_component img {
@@ -17,78 +18,76 @@
 }
 
 .Plante {
-  background-color: rgb(66, 219, 66);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, #16e116);
 }
 
 .Poison {
-  background-color: rgb(135, 54, 135);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(135, 54, 135));
 }
 
 .Feu, .Fire {
-  background-color: rgb(227, 168, 59);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(227, 168, 59));
 }
 
 .Vol {
-  background-color: rgb(170, 170, 212);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(170, 170, 212));
 }
 
 .Eau {
-  background-color: rgb(72, 72, 221);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(72, 72, 221));
 }
 
 .Insecte {
-  background-color: rgb(65, 130, 65);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(65, 130, 65));
 }
 
 .Normal {
-  background-color: gray;
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, gray);
 }
 
 .Sol {
-  background-color: rgb(126, 70, 3);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(126, 70, 3));
   color: white;
 }
 
 .Électrik {
-  background-color: rgb(245, 245, 28);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(245, 245, 28));
 }
 
 .Fée {
-  background-color: pink;
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, pink);
 }
 
 .Combat {
-  background-color: rgb(235, 197, 127);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(235, 197, 127));
 }
 
 .Psy {
-  background-color: rgb(224, 95, 117);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(224, 95, 117));
 }
 
 .Roche {
-  background-color: rgb(70, 70, 70);
-  color: white;
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(70, 70, 70));
 }
 
 .Acier {
-  background-color: steelblue;
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, steelblue);
 }
 
 .Glace {
-  background-color: rgb(209, 209, 244);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(209, 209, 244));
 }
 
 .Spectre {
-  background-color: rgb(166, 115, 166);
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(166, 115, 166));
 }
 
 .Dragon {
-  background-color: blueviolet;
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, blueviolet);
 }
 
 .Ténèbres {
-  background-color: rgb(47, 47, 47);
-  color: white;
+  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(47, 47, 47));
 }
 
 /*# sourceMappingURL=type.css.map */
