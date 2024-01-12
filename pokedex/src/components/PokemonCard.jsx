@@ -74,7 +74,6 @@ function PokemonCard({ name_type, name, cover, type, id, generation, height, wei
                         </div>
                         <div className='card-details'>
                             <RadarChart atk={atk} def={def} vit={vit} hp={hp} spe_atk={spe_atk} spe_def={spe_def}/>
-                            <RadarChart/>
 
                         </div>
                     </div>
