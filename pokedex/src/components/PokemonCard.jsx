@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../style/PokemonCard.css'
 import Type from './Type';
 
-function PokemonCard({ name, cover, type, id, generation, height, weight}) {
+function PokemonCard({ name_type, name, cover, type, id, generation, height, weight}) {
     const [isModalVisible, setModalVisibility] = useState(false)
     const [coverState, setCoverState] = useState("")
     const [coverIsShiny, setCoverIsShiny] = useState(false)
@@ -33,7 +33,7 @@ function PokemonCard({ name, cover, type, id, generation, height, weight}) {
 
     return (
         <div>
-            <div className="card" onClick={handleCardClick}>
+            <div className={`card ${name_type}`} onClick={handleCardClick}>
                 <h1>#{id}</h1>
                 <img className="pokedex-cover" src={cover[0]} alt={`cover`} />
                 <div className='card-details'>
