@@ -22,72 +22,72 @@
 }
 
 .Poison {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(135, 54, 135));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(135, 54, 135));
 }
 
 .Feu, .Fire {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(227, 168, 59));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(227, 168, 59));
 }
 
 .Vol {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(170, 170, 212));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(170, 170, 212));
 }
 
 .Eau {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(72, 72, 221));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(72, 72, 221));
 }
 
 .Insecte {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(65, 130, 65));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(65, 130, 65));
 }
 
 .Normal {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, gray);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, gray);
 }
 
 .Sol {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(126, 70, 3));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(126, 70, 3));
   color: white;
 }
 
 .Électrik {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(245, 245, 28));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(245, 245, 28));
 }
 
 .Fée {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, pink);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, pink);
 }
 
 .Combat {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(235, 197, 127));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(235, 197, 127));
 }
 
 .Psy {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(224, 95, 117));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(224, 95, 117));
 }
 
 .Roche {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(70, 70, 70));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(70, 70, 70));
 }
 
 .Acier {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, steelblue);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, steelblue);
 }
 
 .Glace {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(209, 209, 244));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(209, 209, 244));
 }
 
 .Spectre {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(166, 115, 166));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(166, 115, 166));
 }
 
 .Dragon {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, blueviolet);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, blueviolet);
 }
 
 .Ténèbres {
-  background: liear-gradient(rgba(0, 0, 0, 0) 33%, rgb(47, 47, 47));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(47, 47, 47));
 }
 
 /*# sourceMappingURL=type.css.map */
