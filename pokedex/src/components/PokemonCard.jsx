@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import '../style/PokemonCard.css'
 import Type from './Type';
+import RadarChart from './RadarChart';
 
-function PokemonCard({ name_type, name, cover, type, id, generation, height, weight}) {
+function PokemonCard({ name_type, name, cover, type, id, generation, height, weight, def, atk, vit, hp, spe_atk, spe_def}) {
     const [isModalVisible, setModalVisibility] = useState(false)
     const [coverState, setCoverState] = useState("")
     const [coverIsShiny, setCoverIsShiny] = useState(false)
@@ -70,6 +71,9 @@ function PokemonCard({ name_type, name, cover, type, id, generation, height, wei
                         </div>
                         <div className='card-details'>
                             <h3>Poids : {weight}</h3>
+                        </div>
+                        <div className='card-details'>
+                            <RadarChart />
                         </div>
                     </div>
                 </div>

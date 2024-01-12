@@ -111,6 +111,12 @@ const Display = () => {
                     type={defPokeType(elem["type"])} 
                     height={elem["Taille"]} 
                     weight={elem["poids"]}
+                    hp={elem["hp"]}
+                    atk={elem["atk"]}
+                    def={elem["def"]}
+                    vit={elem["vit"]}
+                    spe_atk={elem["spe_atk"]}
+                    spe_def={elem["spe_def"]}
 
                     />
                 })
