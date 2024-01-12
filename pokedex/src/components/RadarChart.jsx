@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Chart from 'react-apexcharts'
 
-const RadarChart = (atk, def, hp, vit, spe_atk, spe_def) => {
+const RadarChart = ({atk, def, hp, vit, spe_atk, spe_def}) => {
     const [chartData, setChartData] = useState({
         option : {
             chart: {
