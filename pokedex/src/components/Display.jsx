@@ -105,6 +105,7 @@ const Display = () => {
                 pokeList.map((elem) => {
                     return <PokemonCard key={elem["id"]} 
                     name_type={pokeTypes[elem["type"][0][0]-1][1]}
+                    name_en={elem["name_en"]}
                     name={elem["name_fr"]} 
                     cover={elem["cover"]} 
                     id={elem["id"]} 

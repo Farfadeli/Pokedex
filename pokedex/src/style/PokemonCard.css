@@ -40,6 +40,7 @@
     max-height: 80%; /* Ajustez la hauteur de la modal selon vos besoins */
     overflow: auto; /* Ajoute une barre de défilement si le contenu dépasse la taille de la modal */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour la modal */
+    overflow-x: hidden;
 }
 
 .modal-content svg{
@@ -64,4 +65,24 @@
     display: flex;
     justify-content: center;
     gap: 25px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    row-gap: 10px;
+    margin-top: 25px;
+}
+.card-container img{
+    width: 75%;
+}
+.btn-contain{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.btn-card{
+    border: none;
+    border-radius: 1rem;
+    padding: .75rem;
 }
