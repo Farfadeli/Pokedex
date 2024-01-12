@@ -32,8 +32,7 @@
     align-items: center;
 }
   
-.modal-content {
-    background: #fff; /* Fond de la modal */
+.modal-content { /* Fond de la modal */
     padding: 20px;
     border-radius: 5px;
     max-width: 80%; /* Ajustez la largeur de la modal selon vos besoins */
