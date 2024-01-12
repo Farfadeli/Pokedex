@@ -12,6 +12,7 @@ const Display = () => {
     const [pokeList, setPokeList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [pokeTypes, setPokeTypes] = useState([])
+    const [pokemon_fetch, setPokemonFetch] = useState([])
 
     async function fetchApi(url_pokemon, url_types) {
       try {
@@ -29,7 +30,8 @@ const Display = () => {
           res.push({
             "id": elem["id"],
             "cover": [elem["image"], elem["image_shiny"]],
-            "name": elem["name"]["fr"],
+            "name_fr": elem["name"]["fr"],
+            "name_en": elem["name"]["en"],
             "generation": elem["generation"],
             "type": [elem["types"]],
             "Evolution":{"EvoledFrom" : {}},
@@ -102,7 +104,7 @@ const Display = () => {
                 pokeList.map((elem) => {
                     return <PokemonCard key={elem["id"]} 
                     name_type={pokeTypes[elem["type"][0][0]-1][1]}
-                    name={elem["name"]} 
+                    name={elem["name_fr"]} 
                     cover={elem["cover"]} 
                     id={elem["id"]} 
                     generation={elem["generation"]} 
