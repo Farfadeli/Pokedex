@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import '../style/PokemonCard.css'
 import Type from './Type';
 import RadarChart from './RadarChart';
 import Cards from './Cards';
+import {ContextLang} from "./hooks/useLang";
 
 function PokemonCard({ name_type, name_en, name, cover, type, id, generation, height, weight, def, atk, vit, hp, spe_atk, spe_def, evovleFrom, evovleTo }) {
     const [isModalVisible, setModalVisibility] = useState(false)
@@ -11,6 +12,9 @@ function PokemonCard({ name_type, name_en, name, cover, type, id, generation, he
     const [cards, setCards] = useState([])
     const [visibleCard, setVisibleCard] = useState(false)
     const [timeStamp, setTimeStamp] = useState(0)
+
+    const [lang, setLang] = useContext(ContextLang)
+
 
     const fetch_card = async (name) => {
         const url = `https://api.pokemontcg.io/v2/cards?q=name:${name_en}`
@@ -23,7 +27,6 @@ function PokemonCard({ name_type, name_en, name, cover, type, id, generation, he
 
     const visible = () => {
         setVisibleCard(true)
-        console.log(cards)
     }
     const handleCardClick = () => {
         fetch_card()
@@ -68,7 +71,7 @@ function PokemonCard({ name_type, name_en, name, cover, type, id, generation, he
                 <div className='modal-overlay'>
                     <div className='modal-content'>
                         <div className='close-x'>
-                            <svg onClick={closeModal} width="25" height="25">
+                            <svg onClick={closeModal} className={"svg-close"} width="25" height="25">
                                 <line x1="0" y1="0" x2="25" y2="25" stroke="black" fill='black' />
                                 <line x1="0" y1="25" x2="25" y2="0" stroke="black" fill='black' />
                             </svg>
@@ -94,12 +97,25 @@ function PokemonCard({ name_type, name_en, name, cover, type, id, generation, he
                             <RadarChart atk={atk} def={def} vit={vit} hp={hp} spe_atk={spe_atk} spe_def={spe_def} />
                             
                         </div>
+                        <div className={"evoles"}>
+                            <p>Évolution de :</p>
+                            {
+                                evovleFrom.map(elem => {
+                                    return (<div><img src={elem["img"]}></img> <b>{elem["condition"]}</b></div>)
+                                })
+                            }
+                            <p>Évolue en :</p>
+                            {
+                                evovleTo.map(elem => {
+                                    return (<div><img src={elem["img"]}></img> <b>{elem["condition"]}</b></div>)
+                                })
+                            }
+                        </div>
                         <div className='btn-contain'><button className={`btn-card ${name_type}`} onClick={() => visible()}>Voir les cartes</button></div>
                         <div className='card-container'>
                         {
                             visibleCard ? cards.map(elem => {
                                 let url_img = elem["images"]["small"]
-                                console.log(url_img)
                                 return <Cards img_url={url_img} />
                             }) : ""
                         }

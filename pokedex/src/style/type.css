@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .type_component {
-  width: 33%;
+  width: 45%;
   height: 30px;
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.311);

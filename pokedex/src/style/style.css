@@ -27,6 +27,7 @@ html .search-component, body .search-component {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
 }
 
 html .search-component .select-list, body .search-component .select-list {
@@ -49,11 +50,12 @@ html .search-component input, body .search-component input {
   width: 75%;
   padding-bottom: 15px;
   border: none;
-  color: white;
+  color: black;
   background: transparent;
   border-bottom: 2px solid rgb(212, 212, 222);
   outline: none;
 }
+.search-component .select-list select{color: black}
 
 html .pokeList, body .pokeList {
   height: 90vh;
@@ -101,7 +103,9 @@ html .container_img, body .container_img {
 
   html .pokeList, body .pokeList {
     grid-template-columns: 80%;
-    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   html .logo, body .logo {
@@ -113,8 +117,8 @@ html .container_img, body .container_img {
 @media only screen and (min-width: 1025px) {
   html .pokeList, body .pokeList {
 
-    grid-template-columns: 20% 20% 20% 20%;
-    margin-left: 10%;
+    grid-template-columns: 22.5% 22.5% 22.5% 22.5%;
+    margin-left: auto;
   }
 
 }
