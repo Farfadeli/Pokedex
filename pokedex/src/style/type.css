@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .type_component {
-  width: 33%;
+  width: 45%;
   height: 30px;
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.311);
@@ -19,92 +19,74 @@
 
 .Plante {
   background: linear-gradient(0deg, #16e116, rgba(255, 255, 255, 0) 75%);
-  animation: anim-plante 0.5s ease-in-out infinite;
 }
 
 .Poison {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(135, 54, 135));
-  animation: anim-poison 0.5s ease-in-out infinite;
 }
 
 .Feu, .Fire {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(227, 168, 59));
-  animation: anim-feu 0.5s ease-in-out infinite;
 }
 
 .Vol {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(170, 170, 212));
-  animation: anim-vol 0.5s ease-in-out infinite;
 }
 
 .Eau {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(72, 72, 221));
-  animation: anim-eau 0.5s ease-in-out infinite;
 }
 
 .Insecte {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(65, 130, 65));
-  animation: anim-insecte 0.5s ease-in-out infinite;
 }
 
 .Normal {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, gray);
-  animation: anim-normal 0.5s ease-in-out infinite;
 }
 
 .Sol {
   background: linear-gradient(to bottom, rgb(255, 255, 255) 25%, rgb(126, 70, 3));
-  animation: anim-sol 0.5s ease-in-out infinite;
 }
 
 .Électrik {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(245, 245, 28));
-  animation: anim-electrik 0.5s ease-in-out infinite;
 }
 
 .Fée {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, pink);
-  animation: anim-fee 0.5s ease-in-out infinite;
 }
 
 .Combat {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(235, 197, 127));
-  animation: anim-combat 0.5s ease-in-out infinite;
 }
 
 .Psy {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(224, 95, 117));
-  animation: anim-psy 0.5s ease-in-out infinite;
 }
 
 .Roche {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(70, 70, 70));
-  animation: anim-roche 0.5s ease-in-out infinite;
 }
 
 .Acier {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, steelblue);
-  animation: anim-acier 0.5s ease-in-out infinite;
 }
 
 .Glace {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(209, 209, 244));
-  animation: anim-glace 0.5s ease-in-out infinite;
 }
 
 .Spectre {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(166, 115, 166));
-  animation: anim-spectre 0.5s ease-in-out infinite;
 }
 
 .Dragon {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, blueviolet);
-  animation: anim-dragon 0.5s ease-in-out infinite;
 }
 
 .Ténèbres {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 25%, rgb(47, 47, 47));
-  animation: anim-tenebre 0.5s ease-in-out infinite;
 }
 
 @keyframes anim-plante {

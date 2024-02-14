@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import Chart from 'react-apexcharts'
 
 const RadarChart = ({atk, def, hp, vit, spe_atk, spe_def}) => {
+    console.log(atk,def,hp,vit,spe_atk,spe_def)
     const [chartData, setChartData] = useState({
-        option : {
+        "option" : {
             chart: {
                 id: 'radar-chart',
             },
@@ -11,7 +12,7 @@ const RadarChart = ({atk, def, hp, vit, spe_atk, spe_def}) => {
                 categories: ['HP','ATK','DEF','VIT','Spe ATK', 'Spe DEF'],
             },
         },
-        series: [
+        "series": [
             {
                 name: 'Stats',
                 data: [hp,atk,def,vit,spe_atk,spe_def],
@@ -21,8 +22,8 @@ const RadarChart = ({atk, def, hp, vit, spe_atk, spe_def}) => {
   return (
     <div>
         <Chart
-        options={chartData.option}
-        series={chartData.series}
+        options={chartData["option"]}
+        series={chartData["series"]}
         type='radar'
         />
     </div>
